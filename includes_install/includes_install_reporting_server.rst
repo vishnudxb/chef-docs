@@ -10,11 +10,12 @@ To set up the |reporting| server:
 
       $ dpkg -i opscode-reporting_1.0.0-1.ubuntu.10.04_amd64.deb
 
-#. This is a placeholder for the max_connections calculations 
+#. Database Connection Pool
 
    If you have more than two Frontends in your cluster, the attribute postgresql['max_connections'] should be adjusted upwards
    in your /etc/opscode/private-chef.rb file.  The final number will be based on the number of Frontend systems in the cluster.
-   All Frontend servers will use the |reporting| server. The default for the postgresql['max_connections'] attribute is 350.
+   All Frontend servers will use the |reporting| server. The default for the postgresql['max_connections'] attribute with no 
+   Add-on packages installed is 350.
    If the default has already been modified to account for other Add-On installations, please use the modified number for
    Current max_connections in the example below. The defaults for bifrost, erchef, and reporting are 20, 20, and 25
    respectively. Each Frontend will have all three of those services running and add the same number of required connections
