@@ -135,7 +135,7 @@ return Keyword
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_return.rst
 
-raise Keyword
+fail and raise Keyword
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_raise.rst
 
