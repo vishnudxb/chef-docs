@@ -35,6 +35,8 @@
 .. |chef apply| replace:: chef-apply
 .. |chef bookshelf| replace:: Bookshelf
 .. |chef client| replace:: chef-client
+.. |chef container| replace:: chef-container
+.. |chef init| replace:: chef-init
 .. |chef ctl| replace:: chef
 .. |chef dk| replace:: chef-dk
 .. |chef docs| replace:: http://docs.opscode.com
@@ -333,7 +335,7 @@
 .. |subcommand knife bootstrap| replace:: **knife bootstrap**
 .. |subcommand knife client| replace:: **knife client**
 .. |subcommand knife configure| replace:: **knife configure**
-.. |subcommand knife container| replace:: **knife container**
+.. |subcommand knife docker| replace:: **knife docker**
 .. |subcommand knife cookbook| replace:: **knife cookbook**
 .. |subcommand knife data bag| replace:: **knife data bag**
 .. |subcommand knife delete| replace:: **knife delete**
@@ -433,6 +435,7 @@
 .. |cookbook database| replace:: **database**
 .. |cookbook djbdns| replace:: **djbdns**
 .. |cookbook dmg| replace:: **dmg**
+.. |cookbook docker| replace:: **docker**
 .. |cookbook drbd| replace:: **drbd**
 .. |cookbook dynect| replace:: **dynect**
 .. |cookbook emacs| replace:: **emacs**
@@ -571,6 +574,8 @@
 .. |cookbook type_policy| replace:: policy
 .. |cookbook type_wrapper| replace:: wrapper
 .. |dockerfile| replace:: Dockerfile
+.. |docker registry| replace:: Docker Registry
+.. |docker hub| replace:: Docker Hub
 .. |enterprise rb| replace:: private-chef.rb
 .. |erb chef_full| replace:: chef-full.erb
 .. |erb chef_windows| replace:: windows-chef-client-msi.erb
@@ -657,6 +662,7 @@
 .. |clojure| replace:: Clojure
 .. |cloudkick| replace:: Cloudkick
 .. |cloudstack| replace:: CloudStack
+.. |control groups| replace:: control groups
 .. |couch db| replace:: CouchDB
 .. |cron| replace:: cron
 .. |crond| replace:: cron.d

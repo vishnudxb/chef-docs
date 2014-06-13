@@ -10,4 +10,3 @@
 * Provisioning and configuring the environments in which |docker| containers are hosted
 * Managing complex, bidirectional dependencies among |docker| containers and other nodes in the network
 
-|docker| containers are managed via a |dockerfile|, where each unique container has its own |dockerfile|.
