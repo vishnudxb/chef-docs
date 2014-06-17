@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The **knife-container** plugin contains the |subcommand knife docker| subcommand which is used to initialize and build containers using |docker| and the |chef client|.
+The **knife-container** plugin contains the |subcommand knife container| subcommand which is used to initialize and build Linux containers using |docker| and |chef container|. 

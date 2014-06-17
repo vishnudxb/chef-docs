@@ -45,7 +45,7 @@ Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_container_install.rst
 
-docker build
+container docker build
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_container_docker_build.rst
 
@@ -57,7 +57,7 @@ Options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_container_docker_build_options.rst
 
-docker init
+container docker init
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_container_docker_init.rst
 

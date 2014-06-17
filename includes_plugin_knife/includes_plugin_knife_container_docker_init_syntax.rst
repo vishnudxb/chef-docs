@@ -7,4 +7,4 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife docker init REPO/IMAGE[:TAG] [OPTIONS]
+   $ knife container docker init REPO/IMAGE [OPTIONS]
