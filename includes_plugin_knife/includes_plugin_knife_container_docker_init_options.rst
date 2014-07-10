@@ -18,7 +18,7 @@ This argument has the following options:
    The directory in which environments are located. This may be a colon-separated path.
 
 ``-f [REPO/]IMAGE[:TAG]``, ``--from [REPO/]IMAGE[:TAG]``
-   Use to specify the image to use as the ``BASE`` value in a |dockerfile|. This image is then tagged and applied as the ``FROM`` value in the |dockerfile|. The default is ``chef/ubuntu-12.04:latest``.
+   Use to specify the image to use as the base image. This image is then tagged and applied as the ``FROM`` value in the |dockerfile|.  The default value is ``chef/ubuntu-12.04:latest``. Currently, this value must be an image made available via the `Chef Docker Hub account <https://registry.hub.docker.com/repos/chef/>`
 
 ``--node-path PATH[:PATH]``
    The directory in which nodes are located. This may be a colon-separated path.
