@@ -3,5 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``docker build`` argument is used to build a |docker| container.
-
+The ``docker build`` argument is used to build a |docker| container image.
