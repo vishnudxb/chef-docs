@@ -4,3 +4,5 @@
 
 
 The |subcommand knife container| plugin is used to initialize and build containers. Use the ``knife container docker`` arguments to initialize containers using |docker|.
+
+.. note:: This plugin requires that you have |docker| installed on the same machine. Installation instructions for your workstation OS are available at http://docs.docker.com/installation/.
