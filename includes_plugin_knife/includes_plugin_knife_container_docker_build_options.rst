@@ -4,12 +4,15 @@
 
 
 This argument has the following options:
-   
+
 ``-d DOCKERFILES_PATH``, ``--force DOCKERFILES_PATH``
-     Use to specify the path to the folder in which |dockerfile| contexts are located.
+  Use to specify the path to the folder in which |dockerfile| contexts are located.
 
 ``--force``
-   Use to force a build. Default value: ``false``.
+  Use to force a build. Default value: ``false``.
 
 ``--no-berks``
-   Use to prevent |berkshelf| from running, even when a |berksfile| exists.
+  Use to prevent |berkshelf| from running, even when a |berksfile| exists.
+
+``--no-cleanup``
+  Use to disable the cleanup of Chef artifacts including Chef Node and Chef Client.
