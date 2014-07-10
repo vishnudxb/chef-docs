@@ -18,7 +18,7 @@ This argument has the following options:
    The directory in which environments are located. This may be a colon-separated path.
 
 ``-f [REPO/]IMAGE[:TAG]``, ``--from [REPO/]IMAGE[:TAG]``
-   Use to specify the image to use as the ``BASE`` value in a |dockerfile|. This image is then tagged and applied as the ``FROM`` value in the |dockerfile|.
+   Use to specify the image to use as the ``BASE`` value in a |dockerfile|. This image is then tagged and applied as the ``FROM`` value in the |dockerfile|. The default is ``chef/ubuntu-12.04:latest``.
 
 ``--node-path PATH[:PATH]``
    The directory in which nodes are located. This may be a colon-separated path.
@@ -31,6 +31,12 @@ This argument has the following options:
 
 ``--server-url URL``
    |url chef_server|
+
+``--secret-file PATH``
+  The path to the file that contains the encryption key.
+
+``--trusted-certs-dir PATH``
+  The path to the directory where your trusted certificates are stored.
 
 ``--validation-client-name NAME``
    The name of the validation client, typically a client named |chef validator|.
