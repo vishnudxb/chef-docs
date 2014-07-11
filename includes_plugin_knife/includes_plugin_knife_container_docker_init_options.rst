@@ -6,19 +6,22 @@
 This argument has the following options:
 
 ``-b``, ``--berksfile``
-   Use to generate a |berksfile| based on the run-list specified by the ``--run-list`` option. This option requires |berkshelf|.
+   Use to generate a |berksfile| based on the run-list specified by the ``--run-list`` option. This option requires |berkshelf| be present on the same machine.
 
 ``--cookbook-path PATH[:PATH]``
    The directory in which cookbooks are located. This may be a colon-separated path.
 
 ``-d DOCKERFILES_PATH``, ``--force DOCKERFILES_PATH``
-     Use to specify the path to the folder in which |dockerfile| contexts are located.
+    Use to specify the path to the folder in which |dockerfile| contexts are located.
 
 ``--environments-path PATH[:PATH]``
    The directory in which environments are located. This may be a colon-separated path.
 
 ``-f [REPO/]IMAGE[:TAG]``, ``--from [REPO/]IMAGE[:TAG]``
    Use to specify the image to use as the base image. This image is then tagged and applied as the ``FROM`` value in the |dockerfile|.  The default value is ``chef/ubuntu-12.04:latest``. Currently, this value must be an image made available via the `Chef Docker Hub account <https://registry.hub.docker.com/repos/chef/>`
+
+``--include-credentials``
+    Use to specify you wish to include secure credentials (validator, encrypted_data_bag_secret, trusted_certs) in the Docker image. By default, those files are deleted after the build process.
 
 ``--node-path PATH[:PATH]``
    The directory in which nodes are located. This may be a colon-separated path.
