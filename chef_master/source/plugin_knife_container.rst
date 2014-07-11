@@ -22,10 +22,6 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_container_docker_build_options.rst
 
-Examples
------------------------------------------------------
-None.
-
 
 docker init
 =====================================================
@@ -45,6 +41,10 @@ Options
 
 Examples
 -----------------------------------------------------
-**Create a Dockerfile**
+**Initializing a |docker| container using local-mode**
 
-.. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_create_dockerfile.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_local_mode.rst
+
+**Initializing a |docker| container using server-mode**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_container_docker_init_server_mode.rst
