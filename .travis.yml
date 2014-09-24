@@ -1,0 +1,16 @@
+language: python
+python:
+  - "2.7"
+install: "pip install -q -r requirements.txt --use-mirrors"
+cache:
+  directories:
+  - build
+notifications:
+  hipchat:
+    rooms:
+      # Build statuses
+      - secure: "OVfGuxEldM+Xb3UIJZtqUY7y7RFSlS84eqFVYe75DHn3dQFJrf+iepEnBc85+9M3r/JLf29m1wC1XkOff606Q5zyhHGgpJR51SWT6xq7qc8dAM85AfLFVIvInjni40CbNfGGxjhRm8zwOWlfBriWPgGMnYEEv4unq0ivkweFC/k="
+      # chef-docs
+      - secure: "DFY+QeLGwXf8MgbMjUu/b3V+bjeSk1fmoVSdDL2ANG0UduLcb2y1HHDat1NyRJPXEUcA34JpQoiTiFhONmulDgjRn0jTt/OiU2uDsh6cCivuIw04Z6DKVyZgkck0M6dorSSAvuk8IB6SiNqSn7o+me4Nin/NWIkhUvuGdiGm0XM="
+script:
+  - make release
