@@ -1,10 +1,40 @@
+# prepare the Sphinx build environment
 language: python
 python:
   - "2.7"
-install: "pip install -q -r requirements.txt --use-mirrors"
+install:
+  - pip install -q -r requirements.txt
+
+# cache our output directory to speed up future builds
 cache:
   directories:
   - build
+
+env:
+  global:
+    # $AWS_ACCESS_KEY_ID
+    - secure: "fiuqD/GpFnFaPmSyyEMThNrHRjOIqe3TJGEOhXO8z6G7yOfmRdf1sCOzalY2CMbtMTKoWYsILjsiGXVDKlrBpMNN1suH2maC1cRaFJ7Anbk4JHkcfzdrtxCkl2SEXN/it+q/gqZ5q3neFHGni82wAVlviJaqLubsTNz+hwf9A6w="
+    # $AWS_SECRET_ACCESS_KEY
+    - secure: "vBSANCUdr3jEbsT6vZvjFQvkqtoSjxYatUJ7VO5BHmV0ZbDtUidG8cuERKp4urns8246ha3A7SMhhEJMnCjt/CG2zmDbbqkiX0auu3aCOKWQ5+NRbyGKkBZNxBY6gkJGMr2WmmXbqEOWfidH+f2KuVsKouG7+xQ18zZsD+FLsYQ="
+  matrix:
+  - DOCSET=master
+  - DOCSET=server
+  - DOCSET=client
+  - DOCSET=devkit
+  - DOCSET=ohai-7
+  - DOCSET=11-16
+
+# generate the actual docs
+script:
+  - make $DOCSET
+
+after_success:
+  # Enable cloudfront support in AWS CLI
+  - aws configure set preview.cloudfront true
+  # Deploy to S3
+  # - aws s3 ...
+
+# notify a few HipChat rooms
 notifications:
   hipchat:
     rooms:
@@ -12,5 +42,3 @@ notifications:
       - secure: "OVfGuxEldM+Xb3UIJZtqUY7y7RFSlS84eqFVYe75DHn3dQFJrf+iepEnBc85+9M3r/JLf29m1wC1XkOff606Q5zyhHGgpJR51SWT6xq7qc8dAM85AfLFVIvInjni40CbNfGGxjhRm8zwOWlfBriWPgGMnYEEv4unq0ivkweFC/k="
       # chef-docs
       - secure: "DFY+QeLGwXf8MgbMjUu/b3V+bjeSk1fmoVSdDL2ANG0UduLcb2y1HHDat1NyRJPXEUcA34JpQoiTiFhONmulDgjRn0jTt/OiU2uDsh6cCivuIw04Z6DKVyZgkck0M6dorSSAvuk8IB6SiNqSn7o+me4Nin/NWIkhUvuGdiGm0XM="
-script:
-  - make release
