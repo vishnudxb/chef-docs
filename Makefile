@@ -1,5 +1,5 @@
 BUILDDIR = build
-S3BUCKET = chef-docs
+S3BUCKET ?= chef-docs-fu
 S3OPTIONS = --acl-public --exclude='.doctrees/*' --exclude='chef/.doctrees/*' --config ~/.s3cfg-chef-docs  --add-header "Cache-Control: max-age=900"
 BUILD_COMMAND = sphinx-build
 PARALLEL_BUILD:=
