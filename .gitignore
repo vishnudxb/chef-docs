@@ -5,3 +5,12 @@
 *.pickle
 
 build/
+
+# Delivery
+
+.delivery/cli.toml
+
+# Test Kitchen
+
+.kitchen/
+.kitchen.local.yml
