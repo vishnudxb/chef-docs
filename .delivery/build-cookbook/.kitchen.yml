@@ -1,0 +1,51 @@
+driver:
+  name: vagrant
+  synced_folders:
+    - ['../..', '/home/vagrant/chef-docs']
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-14.04
+
+default_delivery_attributes: &default_delivery_attributes
+  build_user: vagrant
+  repo: /home/vagrant/chef-docs
+
+suites:
+  #######################################################################
+  # BASE SETUP
+  #######################################################################
+  - name: default
+    attributes:
+      delivery_builder:
+        <<: *default_delivery_attributes
+    run_list:
+      - build-cookbook::default
+
+  #######################################################################
+  # PUBLISH PHASE
+  #######################################################################
+  - name: publish
+    attributes:
+      delivery_builder:
+        <<: *default_delivery_attributes
+    run_list:
+      - build-cookbook::default
+      - build-cookbook::publish
+
+  #######################################################################
+  # DEPLOY PHASE
+  #######################################################################
+  - name: deploy
+    attributes:
+      delivery_builder:
+        <<: *default_delivery_attributes
+        change:
+          stage: delivered
+
+    run_list:
+      - build-cookbook::default
+      - build-cookbook::publish
+      - build-cookbook::deploy
