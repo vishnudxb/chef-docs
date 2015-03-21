@@ -85,6 +85,8 @@ The server acts as a repository for all of the data that may be needed by the |c
 
 **Settings and Tools:** :doc:`Web user interface </analytics_webui_tasks>` | :doc:`opscode-analytics.rb </config_rb_analytics>` | :doc:`opscode-analytics-ctl </ctl_analytics>` | :doc:`Analytics API </api_analytics>` | :doc:`knife-analytics (plugin) </plugin_knife_analytics>`
 
+**Troubleshooting:** :doc:`Zookeeper </analytics_zookeeper_troubleshooting>`
+
 The Nodes
 =====================================================
 **The Basics:** :doc:`About Nodes </nodes>` | :doc:`chef-client (agent) </chef_client>` | `The chef-client Run <http://docs.chef.io/chef_client.html#the-chef-client-title-run>`_ | :doc:`Chef Solo </chef_solo>` | :doc:`Debug Recipes </chef_shell>` | :doc:`Chef for Junos OS </junos>`
